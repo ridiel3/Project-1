@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <!--I don't know why, Rumi, but you need to write "safe" in order to have the markdown content
+    interpreted by the browser. Otherwise it will render it as plain text. Try it yourself :)-->
+    <h2>{{ title }}</h2>
+    {{ text_content|safe }}
+
+    <!--Woooooooow, Rumi, there was a big issue here I solved by studying other codes of the same 
+    project! It seems the word "title", after 'edit' assigns this somehow the value of title 
+    necessary for the function in views.py to know the current title is the one that should
+    go in the <str:title> part back in urls.py. I still don't get it fully tho-->
+    <div>
+        <a href="{% url 'edit' title %}">Edit</a>
+    </div>
+
+{% endblock %}

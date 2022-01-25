@@ -1,0 +1,9 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ query }}
+{% endblock %}
+
+{% block body %}
+    {{ text_content|safe }}
+{% endblock %}

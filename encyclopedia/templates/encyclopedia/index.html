@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <h3>This is a useless list of all our fucking entries :)</h3>
+
+    <ul>
+        {% for entry in entries %}
+        <a href="wiki/{{ entry }}"><li>{{ entry }}</li></a>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

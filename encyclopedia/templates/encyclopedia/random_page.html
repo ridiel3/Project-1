@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ selected_page }}
+{% endblock %}
+
+{% block body %}
+    <h2>{{ selected_page }}</h2>
+    {{ random_page|safe }}
+
+
+{% endblock %}
